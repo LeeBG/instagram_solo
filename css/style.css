@@ -5,16 +5,29 @@
 }
 
 header {
-    z-index: 1;
+    z-index: 9999;
     position: sticky!important;
     top: 0;
     background-color: white;
 }
 
+.up_header {
+    height: 54px;
+    padding: 0 20px;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    width: 100%;
+    min-width: 700px;
+    border-bottom: 1px solid rgb(202, 201, 201);
+}
+
 .header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 0 20%;
+    margin: 0 15%;
 }
 
 hr {
@@ -50,10 +63,11 @@ hr {
 
 .logo a img {
     width: 100px;
-    height: 50px;
+    height: 30px;
 }
 
 .search {
+    display: flex;
     width: 250px;
     position: relative;
 }
@@ -68,11 +82,13 @@ hr {
 }
 
 .search>div span {
+    display: flex;
     color: gray;
     font-size: 20px;
 }
 
 .search input {
+    display: flex;
     font-size: 20px;
     width: 100%;
     text-align: center;
@@ -82,7 +98,11 @@ hr {
 }
 
 main {
-    margin: 0 20%;
+    margin: 0 15%;
+}
+
+.mgt20 {
+    margin-top: 20px;
 }
 
 .people {
@@ -152,8 +172,8 @@ main {
     /*이름*/
     display: flex;
     align-items: center;
-    margin-right: 30px;
-    cursor: pointer;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .profile__img {
@@ -260,28 +280,404 @@ main {
 .grid-container {
     display: grid;
     grid-gap: 10px;
-    background-color: #2196F3;
-    padding: 10px;
+    background-color: white;
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 20px;
-    font-size: 30px;
+    position: relative;
+    background-color: white;
+}
+
+.grid-item:hover {
+    background-color: white;
+    filter: brightness(70%);
+    cursor: pointer;
+}
+
+.grid-item>img {
+    width: 100%;
+    height: 100%;
 }
 
 .item1 {
-    grid-column: 1 / span 2;
+    grid-column: 1;
     grid-row: 1;
 }
 
 .item2 {
-    grid-column: 3;
+    grid-column: 2/ span 2;
     grid-row: 1 / span 2;
 }
 
 .item5 {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 1;
     grid-row: 3;
+}
+
+.modaldeco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid rgb(228, 225, 225);
+    border-radius: 12px;
+}
+
+.border0 {
+    border: 0px;
+    display: flex;
+    width: 33%;
+    height: 33%;
+    align-items: center;
+    justify-content: center;
+    top: 20%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 30px 15%;
+}
+
+.footer__box {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer__box2 {
+    font-size: 12px;
+    color: rgba(var(--f52, 142, 142, 142), 1);
+    text-align: center;
+    margin-left: 10px;
+}
+
+.footer__box a {
+    font-size: 12px;
+    font-weight: 700;
+    color: #00376b;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.pr_main {
+    background-color: white;
+    border-bottom: 1px solid rgb(228, 225, 225);
+    width: 100%;
+    height: 300px;
+}
+
+.pr_up_frame {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.pr_img {
+    padding: 0 20px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pr_img img {
+    width: 170px;
+    height: 170px;
+}
+
+.pr_info {
+    padding-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    width: 67%;
+}
+
+.pr_empty {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.pr_name {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.pr_name button {
+    border: 1px solid rgb(228, 225, 225);
+}
+
+.sec_pr_info {
+    margin-top: 16px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trd_pr_info {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sec-section__menu {
+    display: flex;
+    width: 67%;
+    justify-content: space-around;
+}
+
+.section__menu__button:active {
+    padding-top: 15px;
+    border-top: 1px solid black;
+}
+
+.body_body {
+    width: 100%;
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #fafafa;
+}
+
+.box2 {
+    display: flex;
+    width: 80%;
+    margin-right: 5%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+.body_box1 {
+    margin-top: 30px;
+    height: 1000px;
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.plofiles {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.flofiles_p {
+    display: flex;
+    height: 40%;
+    width: 40%;
+}
+
+.fplofiles_icon {
+    display: flex;
+    border: 3px solid #c42d91;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+
+.body_modal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.body_p1 {
+    display: flex;
+    width: 100%;
+    height: 70%;
+}
+
+.small_icon2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.name_mid {
+    margin-left: 10px;
+}
+
+.font_xm {
+    margin-top: 10px;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: x-small;
+}
+
+.datgul {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #dbdbdb;
+}
+
+.gul {
+    border: 0px solid white;
+    width: 100%;
+    height: 100%;
+}
+
+.rptl {
+    width: 5%;
+    border: 0px solid #dbdbdb;
+    background-color: white;
+    color: turquoise;
+}
+
+
+/* ---------------------------insta.html */
+
+.profile_top {
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+
+.profile_p1box {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_p1 img {
+    margin-left: 30%;
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+}
+
+.profile_gulbox {
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.house_box {
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.profile_house {
+    display: flex;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.profile_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile_info span {
+    font-size: small;
+}
+
+.footer_1box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    left: 0;
+    background-color: #fafafa;
+}
+
+footer span {
+    font-size: x-small;
+    color: gray;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.dropup button {
+    font-size: x-small;
+    color: gray;
+    margin-top: 5px;
+}
+
+.house_big {
+    display: flex;
+    width: 100%;
+    height: 700px;
+    background-color: #fafafa;
+}
+
+.big_big {
+    display: flex;
+    width: 80%;
+    height: 95%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.big_small1 {
+    width: 20%;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.big_small1 div {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: small;
+}
+
+.big_small2 {
+    width: 20%;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.big_small2 div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.big_small3 {
+    width: 80%;
+    border-top: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    border-radius: 6px;
+}
+
+.big_small3 div {
+    margin-left: 30px;
+    color: gray;
+}
+
+.big_small3 input {
+    width: 60%;
+    margin-top: 30px;
+    border: 1px solid #dbdbdb;
 }
